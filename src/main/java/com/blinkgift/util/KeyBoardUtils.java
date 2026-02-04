@@ -34,4 +34,14 @@ public class KeyBoardUtils {
         );
         return createMarkup(List.of(List.of(accept, reject)));
     }
+
+    public static InlineKeyboardMarkup createOpenAppButton() {
+        InlineKeyboardButton button = new InlineKeyboardButton();
+
+        button.setUrl("https://t.me/insnap_bot/app?startapp=market");
+
+        InlineKeyboardMarkup markup = new InlineKeyboardMarkup();
+        markup.setKeyboard(List.of(List.of(button)));
+        return markup;
+    }
 }
